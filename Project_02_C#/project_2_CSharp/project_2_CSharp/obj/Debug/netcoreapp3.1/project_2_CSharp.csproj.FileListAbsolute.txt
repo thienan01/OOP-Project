@@ -1,0 +1,14 @@
+C:\Users\AnLe\Desktop\Project-OOP\Project_02_C#\project_2_CSharp\project_2_CSharp\bin\Debug\netcoreapp3.1\project_2_CSharp.exe
+C:\Users\AnLe\Desktop\Project-OOP\Project_02_C#\project_2_CSharp\project_2_CSharp\bin\Debug\netcoreapp3.1\project_2_CSharp.deps.json
+C:\Users\AnLe\Desktop\Project-OOP\Project_02_C#\project_2_CSharp\project_2_CSharp\bin\Debug\netcoreapp3.1\project_2_CSharp.runtimeconfig.json
+C:\Users\AnLe\Desktop\Project-OOP\Project_02_C#\project_2_CSharp\project_2_CSharp\bin\Debug\netcoreapp3.1\project_2_CSharp.runtimeconfig.dev.json
+C:\Users\AnLe\Desktop\Project-OOP\Project_02_C#\project_2_CSharp\project_2_CSharp\bin\Debug\netcoreapp3.1\project_2_CSharp.dll
+C:\Users\AnLe\Desktop\Project-OOP\Project_02_C#\project_2_CSharp\project_2_CSharp\bin\Debug\netcoreapp3.1\project_2_CSharp.pdb
+C:\Users\AnLe\Desktop\Project-OOP\Project_02_C#\project_2_CSharp\project_2_CSharp\obj\Debug\netcoreapp3.1\project_2_CSharp.csproj.AssemblyReference.cache
+C:\Users\AnLe\Desktop\Project-OOP\Project_02_C#\project_2_CSharp\project_2_CSharp\obj\Debug\netcoreapp3.1\project_2_CSharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AnLe\Desktop\Project-OOP\Project_02_C#\project_2_CSharp\project_2_CSharp\obj\Debug\netcoreapp3.1\project_2_CSharp.AssemblyInfoInputs.cache
+C:\Users\AnLe\Desktop\Project-OOP\Project_02_C#\project_2_CSharp\project_2_CSharp\obj\Debug\netcoreapp3.1\project_2_CSharp.AssemblyInfo.cs
+C:\Users\AnLe\Desktop\Project-OOP\Project_02_C#\project_2_CSharp\project_2_CSharp\obj\Debug\netcoreapp3.1\project_2_CSharp.csproj.CoreCompileInputs.cache
+C:\Users\AnLe\Desktop\Project-OOP\Project_02_C#\project_2_CSharp\project_2_CSharp\obj\Debug\netcoreapp3.1\project_2_CSharp.dll
+C:\Users\AnLe\Desktop\Project-OOP\Project_02_C#\project_2_CSharp\project_2_CSharp\obj\Debug\netcoreapp3.1\project_2_CSharp.pdb
+C:\Users\AnLe\Desktop\Project-OOP\Project_02_C#\project_2_CSharp\project_2_CSharp\obj\Debug\netcoreapp3.1\project_2_CSharp.genruntimeconfig.cache
