@@ -1,0 +1,41 @@
+Thiết bị(Thương hiệu, Kích thước màn hình, Chip, ram, dung lượng, màu sắc, giá)
+	+ constructor, Nhập, xuất, giá bán
+ - Điện Thoại: Thiết bị (sim )
+	+ constructor, Nhập, xuất, giá bán ( giá + giá*0.1(thuế) + 200k(bảo hành) )
+ - Laptop : Thiết bị (Đèn bàn phím)	
+	+ constructor, Nhập, xuất, giá bán( giá + giá+0.15 + 50k(cài win)
+
+
+Nhân sự (Họ tên, CMND, năm sinh, chức vụ, lương căn bản, lương){ Lương=lương căn bản}
+ - Nhân viên bán hàng:nhân sự(Số thiết bị bán được, số ngày nghỉ)
+	+ Constructor, Nhập, xuất
+	+ Tính lương ( Lương căn bản + số thiết bị bán*100k - số ngày nghỉ*(lương căn bản/ 30)
+ 	+ hàm hủy
+ - quản lý (Số giờ tăng ca)
+	+ Constructor, Nhập, xuất
+	+ Tính lương ( lương căn bản + số giờ tăng ca* 200k)
+	+ Hàm hủy
+ - Giam đốc(giám đốc bộ phận, số hợp đồng)
+	+ Constructor, Nhập, xuất
+	+ Tính lương ( lương căn bản + số hợp đồng*10trieu)
+
+
+Khách hàng (họ tên, CMND, email, năm sinh)
+	+ Constructor, Nhập, xuất
+
+
+Hóa đơn(Khác hàng, thiết bị hoặc list thiết bị)	
+	+ Constructor, Nhập, xuất
+	+ tính tổng tiền của hóa đơn
+
+Cửa hàng( tên cửa hàng, danh sách nhân viên, danh sách thiết bị)
+	+ tính lương cho nhân viên
+	+ sắp xế nhân viên theo lương
+	+ tìm kím theo chức vụ
+	+ tìm kím theo tên
+	+ tìm m nhân viên có lương cao nhất
+	+ tổng lương của công ty
+
+
+
+	
