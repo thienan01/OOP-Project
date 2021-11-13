@@ -4,9 +4,10 @@ using System.Text;
 
 namespace project_2_CSharp
 {
-     abstract class Device
+    abstract class Device
     {
         private String brand;
+        private string name;
         private String size;
         private String chip;
         private int ram;
@@ -21,10 +22,11 @@ namespace project_2_CSharp
         public int Capacity { get => capacity; set => capacity = value; }
         public string Color { get => color; set => color = value; }
         public decimal Price { get => price; set => price = value; }
+        public string Name { get => name; set => name = value; }
 
         public Device() { }
 
-        public Device(string brand, string size, string chip, int ram, int capacity, string color, decimal price)
+        protected Device(string brand, string name, string size, string chip, int ram, int capacity, string color, decimal price)
         {
             Brand = brand;
             Size = size;
@@ -33,8 +35,36 @@ namespace project_2_CSharp
             Capacity = capacity;
             Color = color;
             Price = price;
+            Name = name;
         }
 
         public abstract void Info();
+
+        public static bool operator <(Device phone1, Device phone2)
+        {
+            int point = 0;
+            if (phone1.Ram < phone2.Ram)
+                point++;
+            if (phone1.Capacity< phone2.Capacity)
+                point++;
+            if (phone1.Price > phone2.Price)
+                point++;
+            if (point >= 2)
+                return true;  
+            return false;
+        }
+        public static bool operator >(Device phone1, Device phone2)
+        {
+            int point = 0;
+            if (phone1.Ram > phone2.Ram)
+                point++;
+            if (phone1.Capacity > phone2.Capacity)
+                point++;
+            if (phone1.Price < phone2.Price)
+                point++;
+            if (point >= 2)
+                return true;
+            return false;
+        }
     }
-}
+    }

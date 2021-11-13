@@ -6,18 +6,16 @@ namespace project_2_CSharp.product
 {
     class Phone:Device
     {
-        private String name;
+
         private String sim;
         
         public string Sim { get => sim; set => sim = value; }
-        public string Name { get => name; set => name = value; }
 
         public Phone(){}
 
-        public Phone(string brand, string name, string size, string chip, int ram, int capacity, string color, decimal price, string sim) : base(brand, size, chip, ram, capacity, color, price)
+        public Phone(string brand, string name, string size, string chip, int ram, int capacity, string color, decimal price, string sim) : base(brand,name, size, chip, ram, capacity, color, price)
         {
             Sim = sim;
-            Name = name;
         }
 
         ~Phone() { }
@@ -38,7 +36,7 @@ namespace project_2_CSharp.product
             Console.WriteLine("Color: " + Color);
             Console.WriteLine("Listed price: " +ListedPrice() +"VND" );
             Console.WriteLine("Sim: " + Sim);
-            Console.WriteLine("_________________________________");
+            Console.WriteLine("-------------------------------------");
         }
     }
 }

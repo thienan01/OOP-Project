@@ -6,18 +6,15 @@ namespace project_2_CSharp.product
 {
     class Laptop:Device
     {
-        private string name;
         private String keyBoardLed;
 
         public string KeyBoardLed { get => keyBoardLed; set => keyBoardLed = value; }
-        public string Name { get => name; set => name = value; }
 
         public Laptop(){}
 
-        public Laptop(string brand, string name, string size, string chip, int ram, int capacity, string color, decimal price, string keyboardled) : base(brand, size, chip, ram, capacity, color, price)
+        public Laptop(string brand, string name, string size, string chip, int ram, int capacity, string color, decimal price, string keyboardled) : base(brand,name, size, chip, ram, capacity, color, price)
         {
             KeyBoardLed = keyboardled;
-            Name = name;
         }
 
         ~Laptop() {  }
@@ -26,7 +23,7 @@ namespace project_2_CSharp.product
         {
             return Price + Price * (Decimal)0.15 + 50000;
         }
-
+        
         public override void Info()
         {
             Console.WriteLine("Brand: " + Brand);
@@ -38,7 +35,7 @@ namespace project_2_CSharp.product
             Console.WriteLine("Color: " + Color);
             Console.WriteLine("Listed price: " + ListedPrice() + "VND");
             Console.WriteLine("Key board: " + KeyBoardLed);
-            Console.WriteLine("_________________________________");
+            Console.WriteLine("-------------------------------------");
         }
     }
 }
