@@ -40,6 +40,17 @@ Cửa hàng( tên cửa hàng, danh sách nhân viên, danh sách thiết bị)
 	+ tìm m nhân viên có lương cao nhất
 	+ tổng lương của công ty
 
+Tiêu chí: 
+- Ít nhất 7 class (đủ)
+- Applying OOP characteristic:
+	+ Encapsulation (đã có)
+	+ Inheritance (đã có)
+	+ Polymophism	
+	+ Operator Overloading
+	+ Interfaces
+	+  Static/Abtract/Virtual Class (đã có)
+- Advanced: Using advanced technologies in C# such as: LinQ, Delegate, Indexers,
+Lambda expression. 
 
 
 	
