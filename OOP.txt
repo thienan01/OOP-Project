@@ -6,21 +6,21 @@ Thiết bị(Thương hiệu, Kích thước màn hình, Chip, ram, dung lượn
 	+ constructor, Nhập, xuất, giá bán( giá + giá+0.15 + 50k(cài win)
 
 
-Nhân sự (Họ tên, CMND, năm sinh, chức vụ, lương căn bản, lương){ Lương=lương căn bản}
- - Nhân viên bán hàng:nhân sự(Số thiết bị bán được, số ngày nghỉ)
+person(Họ tên, CMND, năm sinh){ Lương=lương căn bản}
+ - Nhân viên bán hàng:person (chức vụ, lương căn bản,Số thiết bị bán được, số ngày nghỉ)
 	+ Constructor, Nhập, xuất
 	+ Tính lương ( Lương căn bản + số thiết bị bán*100k - số ngày nghỉ*(lương căn bản/ 30)
  	+ hàm hủy
- - quản lý (Số giờ tăng ca)
+ - quản lý (chức vụ, lương căn bản, lương, Số giờ tăng ca)
 	+ Constructor, Nhập, xuất
 	+ Tính lương ( lương căn bản + số giờ tăng ca* 200k)
 	+ Hàm hủy
- - Giam đốc(giám đốc bộ phận, số hợp đồng)
+ - Giam đốc(chức vụ, lương căn bản, lương, giám đốc bộ phận, số hợp đồng)
 	+ Constructor, Nhập, xuất
 	+ Tính lương ( lương căn bản + số hợp đồng*10trieu)
 
 
-Khách hàng (họ tên, CMND, email, năm sinh)
+Khách hàng:person (email, địa chỉ)
 	+ Constructor, Nhập, xuất
 
 
