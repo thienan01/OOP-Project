@@ -43,6 +43,9 @@ namespace project_2_CSharp
             List<Person> ceoList = new List<Person> { ceo1, ceo2 };
         home:
             Console.Clear();
+            Console.WriteLine("    ----------");
+            Console.WriteLine("   | "+PhoneStore.storeName+" |");
+            Console.WriteLine("    ----------");
             bool loop = true;
             while (loop == true)
             {

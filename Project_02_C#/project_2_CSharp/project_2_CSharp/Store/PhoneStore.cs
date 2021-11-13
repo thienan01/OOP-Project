@@ -53,15 +53,21 @@ namespace project_2_CSharp.Store
         {
             if (phone1>phone2)
             {
+                Console.WriteLine("---------------------------------");
                 Console.WriteLine(phone1.Name + " is better than " + phone2.Name);
+                Console.WriteLine("---------------------------------");
             }
             else if (phone1 < phone2)
             {
+                Console.WriteLine("---------------------------------");
                 Console.WriteLine(phone2.Name + " is better than " + phone1.Name);
+                Console.WriteLine("---------------------------------");
             }
             else
             {
+                Console.WriteLine("---------------------------------");
                 Console.WriteLine(phone2.Name + " is the same " + phone1.Name);
+                Console.WriteLine("---------------------------------");
             }
         }
     }
