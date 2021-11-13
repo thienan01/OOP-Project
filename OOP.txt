@@ -1,10 +1,14 @@
 Thiết bị(Thương hiệu, Kích thước màn hình, Chip, ram, dung lượng, màu sắc, giá)
-	+ constructor, Nhập, xuất, giá bán
+	+ Đống gói, 2 constructor, Nhập
+	+ Info(); (class abtract)
  - Điện Thoại: Thiết bị (sim )
-	+ constructor, Nhập, xuất, giá bán ( giá + giá*0.1(thuế) + 200k(bảo hành) )
+	+ Đống gói, 2 constructor, Nhập
+	+ ListedPrice();  return( giá + giá*0.1(thuế) + 200k(bảo hành) )
+	+ Info(); (override)
  - Laptop : Thiết bị (Đèn bàn phím)	
-	+ constructor, Nhập, xuất, giá bán( giá + giá+0.15 + 50k(cài win)
-
+	+ Đống gói, 2 constructor, Nhập
+	+ ListedPrice(); return (giá + giá+0.15 + 50k(cài win))
+	+ Info(); (override)
 
 person(Họ tên, CMND, năm sinh){ Lương=lương căn bản}
  - Nhân viên bán hàng:person (chức vụ, lương căn bản,Số thiết bị bán được, số ngày nghỉ)
