@@ -1,11 +1,21 @@
-Thiết bị(Thương hiệu, tên, Kích thước màn hình, Chip, ram, dung lượng, màu sắc, giá)
+Thiết bị(Thương hiệu, he dieu hanh, tên, Kích thước màn hình, Chip, ram, dung lượng, màu sắc, giá)
 	+ Đống gói, 2 constructor, Nhập
 	+ Info(); (class abtract)
 	+ operator overloading (so sánh 2 thiết bị)
+	+ public virtual string installApp(IAndroidCompatible app) { return ""; }
+        + public virtual string installApp(IAppleCompatible app) { return ""; }
+	
  - Điện Thoại: Thiết bị (sim)
 	+ Đống gói, 2 constructor, Nhập, hủy
 	+ ListedPrice();  return( giá + giá*0.1(thuế) + 200k(bảo hành) )
 	+ Info(); (override)
+	+ InstallApp(IAndroidCompatible app) (override từ class thiết bị)
+		+ nếu app.check(hệ điều hành) true return app.downloading()
+		+ else return " App is not compatible with phone "
+	+ InstallApp(IAppleCompatible app)
+		+ nếu app.check(hệ điều hành) true return app.downloading()
+		+ else return " App is not compatible with phone "
+		
  - Laptop : Thiết bị (Đèn bàn phím)	
 	+ Đống gói, 2 constructor, Nhập
 	+ ListedPrice(); return (giá + giá+0.15 + 50k(cài win))
@@ -25,6 +35,23 @@ person(Họ tên, CMND, năm sinh){ Lương=lương căn bản}
 	+ Constructor, Nhập, xuất
 	+ Tính lương ( lương căn bản + số hợp đồng*10trieu)
 
+- interface IAndroidCompatible
+	+ string OSCompatible { get; }
+        + string downloading();
+	+ bool check(string os);
+- interface IAppleCompatible
+	+ string OSCompatible { get; }
+        + string downloading();
+	+ bool check(string os);
+- FacebookApp( appName = "facebook for android" , version = "12.3" )
+	+ public override string ToString() return "app name: " + appName  + ", Version: " + version; ( hàm override tostring() )
+	+ Downloading() return "Downloading + ToString()";
+	+ OSCompatible{ get {return "Android"}}
+	+ check(string os) 
+		if (os == this.OSCompatible) return true;
+            	else return false; 
+- YoutubeApp( tương tự fb app nhưng hàm OSCompatible = "IOS"
+	
 Khách hàng:person (email, địa chỉ)
 	+ Constructor, Nhập, xuất
 
