@@ -1,4 +1,5 @@
-﻿using System;
+﻿using project_2_CSharp.App;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -14,7 +15,7 @@ namespace project_2_CSharp
         private int capacity;
         private String color;
         private decimal price;
-
+        private string os;
         public string Brand { get => brand; set => brand = value; }
         public string Size { get => size; set => size = value; }
         public string Chip { get => chip; set => chip = value; }
@@ -23,9 +24,22 @@ namespace project_2_CSharp
         public string Color { get => color; set => color = value; }
         public decimal Price { get => price; set => price = value; }
         public string Name { get => name; set => name = value; }
+        public string Os { get => os; set => os = value; }
 
         public Device() { }
 
+        protected Device(string brand, string name, string os, string size, string chip, int ram, int capacity, string color, decimal price)
+        {
+            Brand = brand;
+            Size = size;
+            Chip = chip;
+            Ram = ram;
+            Capacity = capacity;
+            Color = color;
+            Price = price;
+            Name = name;
+            Os = os;
+        }
         protected Device(string brand, string name, string size, string chip, int ram, int capacity, string color, decimal price)
         {
             Brand = brand;
@@ -37,7 +51,6 @@ namespace project_2_CSharp
             Price = price;
             Name = name;
         }
-
         public abstract void Info();
 
         public static bool operator <(Device phone1, Device phone2)
@@ -66,5 +79,7 @@ namespace project_2_CSharp
                 return true;
             return false;
         }
+        public virtual string installApp(IAndroidCompatible app) { return ""; }
+        public virtual string installApp(IAppleCompatible app) { return ""; }
     }
     }

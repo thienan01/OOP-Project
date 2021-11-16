@@ -1,4 +1,5 @@
-﻿using project_2_CSharp.personnel;
+﻿using project_2_CSharp.App;
+using project_2_CSharp.personnel;
 using project_2_CSharp.product;
 using project_2_CSharp.Store;
 using System;
@@ -11,11 +12,11 @@ namespace project_2_CSharp
         static void Main(string[] args)
         {
             //Create phone data
-            Device phone1 = new Phone("Samsung", "Samsung S21", "6.3", "Exenos 8880", 6, 128, "Black", 25990000, "Doul sim");
-            Device phone2 = new Phone("Samsung", "Samsung Note 20", "6.7", "Exenos 8880", 8, 64, "White", 27990000, "Doul sim");
-            Device phone3 = new Phone("Apple", "Iphone 13 XS MAX", "6.5", "Apple A15", 6, 512, "Black", 35990000, "Dou sim");
-            Device phone4 = new Phone("Apple", "Iphone 12 Pro MAX", "6.3", "Apple A13", 6, 512, "Pink", 23990000, "Single sim");
-            List<Device> phoneList = new List<Device>() { phone1, phone2, phone3, phone4};
+            Device phone1 = new Phone("Samsung", "Samsung S21", "Android", "6.3", "Exenos 8880", 6, 128, "Black", 25990000, "Doul sim");
+            Device phone2 = new Phone("Samsung", "Samsung Note 20", "Android", "6.7", "Exenos 8880", 8, 64, "White", 27990000, "Doul sim");
+            Device phone3 = new Phone("Apple", "Iphone 13 XS MAX", "IOS", "6.5", "Apple A15", 6, 512, "Black", 35990000, "Dou sim");
+            Device phone4 = new Phone("Apple", "Iphone 12 Pro MAX", "IOS", "6.3", "Apple A13", 6, 512, "Pink", 23990000, "Single sim");
+            List<Device> phoneList = new List<Device>() { phone1, phone2, phone3, phone4 };
 
             //Create laptop data
             Device laptop1 = new Laptop("Asus", "Zenbook 14", "14", "Intel i7", 8, 512, "Blue", 22990000, "Led");
@@ -35,16 +36,21 @@ namespace project_2_CSharp
             //Create manager data
             Person manager1 = new Manager("Nguyen Thi E", "234567426", 1990, "Manager", 12000000, 24);
             Person manager2 = new Manager("Nguyen Thi F", "274468142", 1989, "Manager", 12000000, 12);
-            List<Person> managerList = new List<Person> {manager1, manager2};
+            List<Person> managerList = new List<Person> { manager1, manager2 };
 
             //Create CEO data
             Person ceo1 = new CEO("Tran Van Q", "153475253", 1970, "CEO", 40000000, "Marketing", 2);
             Person ceo2 = new CEO("Tran Van X", "634543364", 1972, "CEO", 40000000, "Sale", 4);
             List<Person> ceoList = new List<Person> { ceo1, ceo2 };
+
+            //Create App data
+            FacebookApp facebook = new FacebookApp();
+            YoutubeApp youtube = new YoutubeApp();
+
         home:
             Console.Clear();
             Console.WriteLine("    ----------");
-            Console.WriteLine("   | "+PhoneStore.storeName+" |");
+            Console.WriteLine("   | " + PhoneStore.storeName + " |");
             Console.WriteLine("    ----------");
             bool loop = true;
             while (loop == true)
@@ -71,6 +77,7 @@ namespace project_2_CSharp
                 "3. Search by name\n" +
                 "4. Sort device by price\n" +
                 "5. Compare to phones\n" +
+                "6. Install application for phone\n" +
                 "99.Clear screen\n" +
                 "0. Go to home");
                 int k = int.Parse(Console.ReadLine());
@@ -93,6 +100,8 @@ namespace project_2_CSharp
                         break;
                     case 5:
                         goto comparePhone;
+                    case 6:
+                        goto installApp;
                     case 0:
                         goto home;
                     case 99:
@@ -152,11 +161,72 @@ namespace project_2_CSharp
                 if (j == 4) secondPhone = phone4;
                 PhoneStore.comparePhone(firstPhone, secondPhone);
             }
+        installApp:
+            Console.Clear();
+            while (true)
+            {
+                Console.WriteLine("** Choose the phone which you want to install app **");
+                foreach (var item in phoneList)
+                {
+                    Console.WriteLine(item.Name + "; " + item.Os);
+                }
+                Console.WriteLine("0. Back");
+                int phoneNum = int.Parse(Console.ReadLine());
+                if (phoneNum == 0) goto devideManagement;
+                Console.Clear();
+                Console.WriteLine("** Choose app **");
+                Console.WriteLine("1. " + facebook);
+                Console.WriteLine("2. " + youtube);
+                int appNum = int.Parse(Console.ReadLine());
+                switch (phoneNum)
+                {
+                    case 1:
+                        switch (appNum)
+                        {
+                            case 1:
+                                Console.WriteLine(phone1.installApp(facebook));
+                                break;
+                            case 2:
+                                Console.WriteLine(phone1.installApp(youtube));
+                                break;
+                        }
+                        break;
+                    case 2:
+                        switch (appNum)
+                        {
+                            case 1:
+                                Console.WriteLine(phone2.installApp(facebook));
+                                break;
+                            case 2:
+                                Console.WriteLine(phone2.installApp(youtube));
+                                break;
+                        }
+                        break;
+                    case 3:
+                        switch (appNum)
+                        {
+                            case 1:
+                                Console.WriteLine(phone3.installApp(facebook));
+                                break;
+                            case 2:
+                                Console.WriteLine(phone3.installApp(youtube));
+                                break;
+                        }
+                        break;
+                    case 4:
+                        switch (appNum)
+                        {
+                            case 1:
+                                Console.WriteLine(phone4.installApp(facebook));
+                                break;
+                            case 2:
+                                Console.WriteLine(phone4.installApp(youtube));
+                                break;
+                        }
+                        break;
+                }
+            }
             
-
-
-
-
         }
     }
 }
