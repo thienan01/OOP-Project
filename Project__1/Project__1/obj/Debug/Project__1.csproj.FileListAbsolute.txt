@@ -1,0 +1,7 @@
+C:\Users\Admin\Desktop\Project__1\Project__1\obj\Debug\Project__1.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Project__1\Project__1\obj\Debug\Project__1.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Project__1\Project__1\bin\Debug\Project__1.exe.config
+C:\Users\Admin\Desktop\Project__1\Project__1\bin\Debug\Project__1.exe
+C:\Users\Admin\Desktop\Project__1\Project__1\bin\Debug\Project__1.pdb
+C:\Users\Admin\Desktop\Project__1\Project__1\obj\Debug\Project__1.exe
+C:\Users\Admin\Desktop\Project__1\Project__1\obj\Debug\Project__1.pdb
