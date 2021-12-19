@@ -27,8 +27,8 @@ namespace Project__1
                 Console.WriteLine("----------------MAIN MENU-------------------");
                 Console.WriteLine("\n ");
                 Console.WriteLine("1.   Line: ");
-                Console.WriteLine("2.   Triangle: ");
-                Console.WriteLine("3.   Rectangle: ");
+                Console.WriteLine("2.   Rectangle: ");
+                Console.WriteLine("3.   Triangle: ");
                 Console.WriteLine("4.   Circle: ");
                 Console.WriteLine("5.   Group: ");
                 Console.WriteLine("6.   Ungroup: ");
@@ -52,7 +52,6 @@ namespace Project__1
                         Console.WriteLine("_______________________________________________________");
                         Console.WriteLine("\n ");
                         Console.ReadKey();
-                        Console.Clear();
                         break;
                     case 2:
                         Console.WriteLine("\t RECTANGLE:");
@@ -63,7 +62,6 @@ namespace Project__1
                         Console.WriteLine("_______________________________________________________");
                         Console.WriteLine("\n ");
                         Console.ReadKey();
-                        Console.Clear();
                         break;
 
                     case 3:
@@ -75,7 +73,6 @@ namespace Project__1
                         Console.WriteLine("_______________________________________________________");
                         Console.WriteLine("\n ");
                         Console.ReadKey();
-                        Console.Clear();
                         break;
                     case 4:
                         Console.WriteLine("\t CIRCLE:");
@@ -86,15 +83,14 @@ namespace Project__1
                         Console.WriteLine("_______________________________________________________");
                         Console.WriteLine("\n ");
                         Console.ReadKey();
-                        Console.Clear();
                         break;
                     case 5:
                         Console.WriteLine("\t GROUP:");
                         mergeShape.group(this.listShape);
+                        Console.WriteLine("Group Done \n");
                         Console.WriteLine("_______________________________________________________");
                         Console.WriteLine("\n ");
                         Console.ReadKey();
-                        Console.Clear();
                         break;
                     case 6:
                         Console.WriteLine("\t UNGROUP:");
@@ -102,7 +98,6 @@ namespace Project__1
                         Console.WriteLine("_______________________________________________________");
                         Console.WriteLine("\n ");
                         Console.ReadKey();
-                        Console.Clear();
                         break;
                     case 7:
                         Console.WriteLine("\t MOVE POSITION:");
@@ -160,10 +155,9 @@ namespace Project__1
                         Console.WriteLine("_______________________________________________________");
                         Console.WriteLine("\n ");
                         Console.ReadKey();
-                        Console.Clear();
                         break;
                     case 8:
-                        Console.WriteLine("\t COLOR:");
+                        Console.WriteLine("\t NEW COLOR:");
                         Console.Write(" Change color?(1-Shape or 2-Group):");
                         int k = Convert.ToInt32(Console.ReadLine());
 
@@ -171,7 +165,6 @@ namespace Project__1
                         Console.WriteLine("_______________________________________________________");
                         Console.WriteLine("\n ");
                         Console.ReadKey();
-                        Console.Clear();
                         break;
                     case 9:
                         break;
