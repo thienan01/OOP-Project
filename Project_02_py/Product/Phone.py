@@ -1,5 +1,3 @@
-
-
 from Product.Device import Device
 
 
@@ -8,6 +6,7 @@ class Phone(Device):
         super().__init__(brand, name, os, size, chip, ram, capacity, color, price)
         self.Sim = sim
     def Info(sefl):
+        super().Info()
         print("Brand: " + sefl.Brand)
         print("Name: " + sefl.Name)
         print("OS: " + sefl.Os)

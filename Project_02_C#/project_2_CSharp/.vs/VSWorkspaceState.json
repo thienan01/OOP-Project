@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\project_2_CSharp"
+    "\\project_2_CSharp",
+    "\\project_2_CSharp\\App",
+    "\\project_2_CSharp\\product",
+    "\\project_2_CSharp\\Store"
   ],
   "SelectedNode": "\\project_2_CSharp.sln",
   "PreviewInSolutionExplorer": false

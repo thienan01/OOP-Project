@@ -51,6 +51,11 @@ namespace project_2_CSharp
             Price = price;
             Name = name;
         }
+        public abstract void insert();
+        ~Device()
+        {
+            System.Diagnostics.Trace.WriteLine("Deletted device!!!");
+        }
         public abstract void Info();
 
         public static bool operator <(Device phone1, Device phone2)

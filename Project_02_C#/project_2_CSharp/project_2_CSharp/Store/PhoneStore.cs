@@ -2,6 +2,7 @@
 using project_2_CSharp.product;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace project_2_CSharp.Store
@@ -16,21 +17,15 @@ namespace project_2_CSharp.Store
                 item.Info();
             }
         }
-        public static void viewStaffList(List<Person> sList)
-        {
-            foreach (var item in sList)
-            {
-                item.Info();
-            }
-        }
         public static void findDevideByName(List<Device> dList, string name)
         {
-            foreach (var item in dList)
+            var queryResult =
+                from device in dList
+                where (device.Name.Contains(name))
+                select device;
+            foreach (var item in queryResult)
             {
-                if (item.Name.Contains(name))
-                {
-                    item.Info();
-                }
+                item.Info();
             }
         }
         public static void sortByPrice(List<Device> dList)
@@ -48,7 +43,6 @@ namespace project_2_CSharp.Store
                 item.Info();
             }
         }
-      
         public static void comparePhone(Device phone1, Device phone2)
         {
             if (phone1>phone2)
@@ -68,6 +62,84 @@ namespace project_2_CSharp.Store
                 Console.WriteLine("---------------------------------");
                 Console.WriteLine(phone2.Name + " is the same " + phone1.Name);
                 Console.WriteLine("---------------------------------");
+            }
+        }
+        public static void viewStaffList(List<Person> sList)
+        {
+            foreach (var item in sList)
+            {
+                item.Info();
+            }
+        }
+        public static void findSalesmanHighestSalary(List<Person> sList)
+        {
+            Person a = null;
+            foreach (var item in sList)
+            {
+                foreach (var item2 in sList)
+                {
+                    if (item.Salary() < item2.Salary())
+                    {
+                        a = item2;
+                    }
+                }
+                
+            }
+            Console.WriteLine("***** The salesman has highest salary *****");
+            a.Info();
+        }
+        public static void findStaffByPosAndName(List<Person> staffList, string pos, string name)
+        {
+            foreach (var item in staffList)
+            {
+                if (item.Position.Equals(pos))
+                {
+                    if (item.Name.Equals(name))
+                    {
+                        item.Info();
+                    }
+                }
+            }
+        }
+        public static void insertDevice(ref List<Device> devices, string type)
+        {
+            if (type.Equals("Laptop"))
+            {
+                Device newLaptop = new Laptop();
+                newLaptop.insert();
+                devices.Add(newLaptop);
+                Console.WriteLine("******* Insert successful *********");
+            }
+            if (type.Equals("Phone"))
+            {
+                Device newPhone = new Phone();
+                newPhone.insert();
+                devices.Add(newPhone);
+                Console.WriteLine("******* Insert successful *********");
+            }
+        }
+        public static void insertStaff(ref List<Person> staff, string positon)
+        {
+            if (positon.Equals("SaleMan"))
+            {
+                Person saleman = new Salesman();
+                saleman.insert();
+                staff.Add(saleman);
+                Console.WriteLine("******* Insert successful *********");
+            }
+            if (positon.Equals("Manager"))
+            {
+                Person manager = new Manager();
+                manager.insert();
+                staff.Add(manager);
+                Console.WriteLine("******* Insert successful *********");
+            }
+            if (positon.Equals("Ceo"))
+            {
+                Person ceo = new CEO();
+                ceo.insert();
+                staff.Add(ceo);
+                Console.WriteLine("******* Insert successful *********");
             }
         }
     }

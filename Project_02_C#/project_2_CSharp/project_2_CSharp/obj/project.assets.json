@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\AnLe\\Desktop\\Project-OOP\\Project_02_C#\\project_2_CSharp\\project_2_CSharp\\project_2_CSharp.csproj",
+      "projectUniqueName": "F:\\trash\\Project-OOP\\Project_02_C#\\project_2_CSharp\\project_2_CSharp\\project_2_CSharp.csproj",
       "projectName": "project_2_CSharp",
-      "projectPath": "C:\\Users\\AnLe\\Desktop\\Project-OOP\\Project_02_C#\\project_2_CSharp\\project_2_CSharp\\project_2_CSharp.csproj",
+      "projectPath": "F:\\trash\\Project-OOP\\Project_02_C#\\project_2_CSharp\\project_2_CSharp\\project_2_CSharp.csproj",
       "packagesPath": "C:\\Users\\AnLe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\AnLe\\Desktop\\Project-OOP\\Project_02_C#\\project_2_CSharp\\project_2_CSharp\\obj\\",
+      "outputPath": "F:\\trash\\Project-OOP\\Project_02_C#\\project_2_CSharp\\project_2_CSharp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\AnLe\\AppData\\Roaming\\NuGet\\NuGet.Config",

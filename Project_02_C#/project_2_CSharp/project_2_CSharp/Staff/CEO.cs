@@ -8,30 +8,34 @@ namespace project_2_CSharp.personnel
     {
         private string department;
         private int numOfContract;
-        private string position;
-        private decimal baseSalary;
 
         public string Department { get => department; set => department = value; }
         public int NumOfContract { get => numOfContract; set => numOfContract = value; }
-        public string Position { get => position; set => position = value; }
-        public decimal BaseSalary { get => baseSalary; set => baseSalary = value; }
 
         public CEO() {}
 
-        public CEO(string name, string cMND, int yearOfBirth, string position, decimal baseSalary, string department, int numOfContract) : base(name, cMND, yearOfBirth)
+        public CEO(string name, string cMND, int yearOfBirth, string position, decimal baseSalary, string department, int numOfContract) : base(name, cMND, yearOfBirth,baseSalary, position)
         {
             Department = department;
             NumOfContract = numOfContract;
-            Position = position;
-            BaseSalary = baseSalary;
         }
 
         ~CEO() { }
-        public  decimal Salary()
+        public override decimal Salary()
         {
             return BaseSalary + (NumOfContract* 10000000);
         }
-
+        public override void insert()
+        {
+            base.insert();
+            Console.Write("Enter name: "); Name = Console.ReadLine();
+            Console.Write("Enter CMND: "); CMND = Console.ReadLine();
+            Console.Write("Enter year of birth: "); YearOfBirth = int.Parse(Console.ReadLine());
+            Console.Write("Enter Position: "); Position = Console.ReadLine();
+            Console.Write("Enter base salary: "); BaseSalary = decimal.Parse(Console.ReadLine());
+            Console.Write("Enter department: "); Department = Console.ReadLine();
+            Console.Write("Enter number of contract: "); NumOfContract = int.Parse(Console.ReadLine());
+        }
         public override void Info()
         {
             base.Info();
