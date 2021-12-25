@@ -63,7 +63,6 @@ public class program {
 
 	public final static void home()
 	{
-		clrscr();
 		System.out.println("    ----------");
 		System.out.println("   | " + PhoneStore.storeName + " |");
 		System.out.println("    ----------");
@@ -84,7 +83,6 @@ public class program {
 	
 	private static void staffmanagement() {
 		// TODO Auto-generated method stub
-		clrscr();
 		System.out.println("1. View salesman list\n" + "2. View manager list\n" + "3. View CEO list\n" + "0. Go to home");
 		int k = Integer.parseInt(new Scanner(System.in).nextLine());
 		switch (k)
@@ -107,7 +105,6 @@ public class program {
 
 	private static void devideManagement() {
 		// TODO Auto-generated method stub
-		clrscr();
 		System.out.println("1. View phone list\n" + "2. View laptop list\n" + "3. Search by name\n" + "4. Sort device by price\n" + "5. Compare to phones\n" + "6. Install application for phone\n" + "99.Clear screen\n" + "0. Go to home");
 		int k = Integer.parseInt(new Scanner(System.in).nextLine());
 		switch (k)
@@ -134,15 +131,11 @@ public class program {
 				installApp();
 			case 0:
 				home();
-			case 99:
-				clrscr();
-				break;
 		}
 		
 	}
 	private static void installApp() {
 		// TODO Auto-generated method stub
-		clrscr();
 		System.out.println("** Choose the phone which you want to install app **");
 		for (var item : phoneList)
 		{
@@ -154,7 +147,6 @@ public class program {
 		{
 			devideManagement();
 		}
-		clrscr();
 		System.out.println("** Choose app **");
 		System.out.println("1. " + facebook);
 		System.out.println("2. " + youtube);
@@ -211,8 +203,6 @@ public class program {
 
 	private static void comparePhone() {
 		// TODO Auto-generated method stub
-		clrscr();
-		clrscr();
 		System.out.println("\nComparison criteria: Base on Ram, Capacity, Price. \nWhich phone has 2/3 better characteristics will be better\n");
 		System.out.println("1. " + phone1.getName() + ", Ram: " + phone1.getRam() + ", Capacity: " + phone1.getCapacity() + ", Price: " + phone1.getPrice());
 		System.out.println("2. " + phone2.getName() + ", Ram: " + phone2.getRam() + ", Capacity: " + phone2.getCapacity() + ", Price: " + phone2.getPrice());
