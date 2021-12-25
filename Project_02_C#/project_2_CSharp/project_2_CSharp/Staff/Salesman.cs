@@ -8,27 +8,33 @@ namespace project_2_CSharp.personnel
     {
         private int numOfDeviceSold;
         private int numOfDayOff;
-        private string position;
-        private decimal baseSalary;
+
 
         public int NumOfDeviceSold { get => numOfDeviceSold; set => numOfDeviceSold = value; }
         public int NumOfDayOff { get => numOfDayOff; set => numOfDayOff = value; }
-        public string Position { get => position; set => position = value; }
-        public decimal BaseSalary { get => baseSalary; set => baseSalary = value; }
 
         public Salesman() {}
 
-        public Salesman(string name, string cMND, int yearOfBirth, string position, decimal baseSalary, int numOfDeviceSold, int numOfDayOff) : base(name, cMND, yearOfBirth)
+        public Salesman(string name, string cMND, int yearOfBirth, string position, decimal baseSalary, int numOfDeviceSold, int numOfDayOff) : base(name, cMND, yearOfBirth,baseSalary,position)
         {
             NumOfDeviceSold = numOfDeviceSold;
             NumOfDayOff = numOfDayOff;
-            Position = position;
-            BaseSalary = baseSalary;
         }
 
+        public override void insert()
+        {
+            base.insert();
+            Console.Write("Enter name: "); Name = Console.ReadLine();
+            Console.Write("Enter CMND: "); CMND = Console.ReadLine();
+            Console.Write("Enter year of birth: "); YearOfBirth = int.Parse(Console.ReadLine());
+            Console.Write("Enter Position: "); Position = Console.ReadLine();
+            Console.Write("Enter base salary: "); BaseSalary = decimal.Parse(Console.ReadLine());
+            Console.Write("Enter number of device sold: "); NumOfDeviceSold = int.Parse(Console.ReadLine());
+            Console.Write("Enter number of days off: "); NumOfDayOff = int.Parse(Console.ReadLine());
+        }
         ~Salesman() { }
 
-        public  decimal Salary()
+        public  override decimal Salary()
         {
             return BaseSalary + 100000 * NumOfDeviceSold - NumOfDayOff * (BaseSalary / 30);
         }

@@ -6,6 +6,7 @@ class Laptop(Device):
         self.KeyBoard = keyboard
     
     def Info(sefl):
+        super().Info()
         print("Brand: " + sefl.Brand)
         print("Name: " + sefl.Name)
         print("OS: " + sefl.Os)

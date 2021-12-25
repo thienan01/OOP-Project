@@ -17,7 +17,6 @@ namespace project_2_CSharp
             Device phone3 = new Phone("Apple", "Iphone 13 XS MAX", "IOS", "6.5", "Apple A15", 6, 512, "Black", 35990000, "Dou sim");
             Device phone4 = new Phone("Apple", "Iphone 12 Pro MAX", "IOS", "6.3", "Apple A13", 6, 512, "Pink", 23990000, "Single sim");
             List<Device> phoneList = new List<Device>() { phone1, phone2, phone3, phone4 };
-
             //Create laptop data
             Device laptop1 = new Laptop("Asus", "Zenbook 14", "14", "Intel i7", 8, 512, "Blue", 22990000, "Led");
             Device laptop2 = new Laptop("Apple", "MacBook Pro M1 2020", "13.3", "Apple M11", 16, 512, "Grey", 42990000, "Led");
@@ -42,7 +41,7 @@ namespace project_2_CSharp
             Person ceo1 = new CEO("Tran Van Q", "153475253", 1970, "CEO", 40000000, "Marketing", 2);
             Person ceo2 = new CEO("Tran Van X", "634543364", 1972, "CEO", 40000000, "Sale", 4);
             List<Person> ceoList = new List<Person> { ceo1, ceo2 };
-
+            List<Person> allStaff = new List<Person>() { salesman1, salesman2, salesman3, salesman4, manager1, manager2, ceo1, ceo2 };
             //Create App data
             FacebookApp facebook = new FacebookApp();
             YoutubeApp youtube = new YoutubeApp();
@@ -78,6 +77,8 @@ namespace project_2_CSharp
                 "4. Sort device by price\n" +
                 "5. Compare to phones\n" +
                 "6. Install application for phone\n" +
+                "7. Insert a phone\n" +
+                "8. Insert a laptop\n" +
                 "99.Clear screen\n" +
                 "0. Go to home");
                 int k = int.Parse(Console.ReadLine());
@@ -102,6 +103,12 @@ namespace project_2_CSharp
                         goto comparePhone;
                     case 6:
                         goto installApp;
+                    case 7:
+                        PhoneStore.insertDevice(ref phoneList, "Phone");
+                        break;
+                    case 8:
+                        PhoneStore.insertDevice(ref laptopList, "Laptop");
+                        break;
                     case 0:
                         goto home;
                     case 99:
@@ -117,6 +124,9 @@ namespace project_2_CSharp
                 Console.WriteLine("1. View salesman list\n" +
                 "2. View manager list\n" +
                 "3. View CEO list\n" +
+                "4. Find the salesman has highest salary\n" +
+                "5. Find staff by position and name\n" +
+                "6. Insert staff\n" +
                 "0. Go to home");
                 int k = int.Parse(Console.ReadLine());
                 switch (k)
@@ -130,6 +140,17 @@ namespace project_2_CSharp
                     case 3:
                         PhoneStore.viewStaffList(ceoList);
                         break;
+                    case 4:
+                        PhoneStore.findSalesmanHighestSalary(salesmanList);
+                        break;
+                    case 5:
+                        Console.Clear();
+                        Console.Write("Enter position off staff: "); string pos = Console.ReadLine();
+                        Console.Write("Enter name off staff: "); string name2 = Console.ReadLine();
+                        PhoneStore.findStaffByPosAndName(allStaff, pos, name2);
+                        break;
+                    case 6:
+                        goto insertStaff;
                     case 0:
                         goto home;
 
@@ -226,7 +247,27 @@ namespace project_2_CSharp
                         break;
                 }
             }
-            
+        insertStaff:
+            Console.Clear();
+            Console.WriteLine("1. Insert Saleman\n" +
+                "2. Insert Manager\n" +
+                "3. Insert Ceo\n" +
+                "0. Back to home\n");
+            int choice = int.Parse(Console.ReadLine());
+            switch (choice)
+            {
+                case 1:
+                    PhoneStore.insertStaff(ref salesmanList, "SaleMan");
+                    break;
+                case 2:
+                    PhoneStore.insertStaff(ref managerList, "Manager");
+                    break;
+                case 3:
+                    PhoneStore.insertStaff(ref ceoList, "Ceo");
+                    break;
+            }
+            goto staffmanagement;
         }
+
     }
 }

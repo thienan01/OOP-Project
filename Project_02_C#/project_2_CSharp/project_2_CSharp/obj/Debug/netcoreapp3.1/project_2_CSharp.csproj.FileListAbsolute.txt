@@ -12,3 +12,17 @@ C:\Users\AnLe\Desktop\Project-OOP\Project_02_C#\project_2_CSharp\project_2_CShar
 C:\Users\AnLe\Desktop\Project-OOP\Project_02_C#\project_2_CSharp\project_2_CSharp\obj\Debug\netcoreapp3.1\project_2_CSharp.dll
 C:\Users\AnLe\Desktop\Project-OOP\Project_02_C#\project_2_CSharp\project_2_CSharp\obj\Debug\netcoreapp3.1\project_2_CSharp.pdb
 C:\Users\AnLe\Desktop\Project-OOP\Project_02_C#\project_2_CSharp\project_2_CSharp\obj\Debug\netcoreapp3.1\project_2_CSharp.genruntimeconfig.cache
+F:\trash\Project-OOP\Project_02_C#\project_2_CSharp\project_2_CSharp\obj\Debug\netcoreapp3.1\project_2_CSharp.csproj.AssemblyReference.cache
+F:\trash\Project-OOP\Project_02_C#\project_2_CSharp\project_2_CSharp\obj\Debug\netcoreapp3.1\project_2_CSharp.GeneratedMSBuildEditorConfig.editorconfig
+F:\trash\Project-OOP\Project_02_C#\project_2_CSharp\project_2_CSharp\obj\Debug\netcoreapp3.1\project_2_CSharp.AssemblyInfoInputs.cache
+F:\trash\Project-OOP\Project_02_C#\project_2_CSharp\project_2_CSharp\obj\Debug\netcoreapp3.1\project_2_CSharp.AssemblyInfo.cs
+F:\trash\Project-OOP\Project_02_C#\project_2_CSharp\project_2_CSharp\obj\Debug\netcoreapp3.1\project_2_CSharp.csproj.CoreCompileInputs.cache
+F:\trash\Project-OOP\Project_02_C#\project_2_CSharp\project_2_CSharp\obj\Debug\netcoreapp3.1\project_2_CSharp.dll
+F:\trash\Project-OOP\Project_02_C#\project_2_CSharp\project_2_CSharp\obj\Debug\netcoreapp3.1\project_2_CSharp.pdb
+F:\trash\Project-OOP\Project_02_C#\project_2_CSharp\project_2_CSharp\bin\Debug\netcoreapp3.1\project_2_CSharp.exe
+F:\trash\Project-OOP\Project_02_C#\project_2_CSharp\project_2_CSharp\bin\Debug\netcoreapp3.1\project_2_CSharp.deps.json
+F:\trash\Project-OOP\Project_02_C#\project_2_CSharp\project_2_CSharp\bin\Debug\netcoreapp3.1\project_2_CSharp.runtimeconfig.json
+F:\trash\Project-OOP\Project_02_C#\project_2_CSharp\project_2_CSharp\bin\Debug\netcoreapp3.1\project_2_CSharp.runtimeconfig.dev.json
+F:\trash\Project-OOP\Project_02_C#\project_2_CSharp\project_2_CSharp\bin\Debug\netcoreapp3.1\project_2_CSharp.dll
+F:\trash\Project-OOP\Project_02_C#\project_2_CSharp\project_2_CSharp\bin\Debug\netcoreapp3.1\project_2_CSharp.pdb
+F:\trash\Project-OOP\Project_02_C#\project_2_CSharp\project_2_CSharp\obj\Debug\netcoreapp3.1\project_2_CSharp.genruntimeconfig.cache

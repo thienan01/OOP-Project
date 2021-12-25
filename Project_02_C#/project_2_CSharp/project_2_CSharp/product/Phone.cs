@@ -19,13 +19,27 @@ namespace project_2_CSharp.product
 
         }
 
-        ~Phone() { }
-
+        ~Phone() {
+            System.Diagnostics.Trace.WriteLine("Deletted phone!!");
+        }
         public decimal ListedPrice()
         {
             return Price + Price * (decimal)0.1 + 200000; 
         }
 
+        public override void insert()
+        {
+            Console.Write("Enter brand: "); Brand = Console.ReadLine();
+            Console.Write("Enter Name: "); Name = Console.ReadLine();
+            Console.Write("Enter OS: "); Os = Console.ReadLine();
+            Console.Write("Enter Size: "); Size = Console.ReadLine();
+            Console.Write("Enter Chip: "); Chip = Console.ReadLine();
+            Console.Write("Enter Ram: "); Ram = int.Parse(Console.ReadLine());
+            Console.Write("Enter Capacity: "); Capacity = int.Parse(Console.ReadLine());
+            Console.Write("Enter Color: "); Color = Console.ReadLine();
+            Console.Write("Enter Price: "); Price = decimal.Parse(Console.ReadLine());
+            Console.Write("Enter Sim: "); Sim = Console.ReadLine();
+        }
         public override void Info()
         {
             Console.WriteLine("Brand: " + Brand);
